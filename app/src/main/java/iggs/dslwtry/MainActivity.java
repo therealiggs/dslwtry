@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private int c = 0;
     private final String tag = "dslw";
     private String word;
-    int[] array = new int[50];
+    int[] array = new int[100];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        for(int i=0;i<50;i++){
+        for(int i=0;i<100;i++){
             array[i] = i;
         }
 
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
             array[i] = a;
         }
 
-        for(int i=0;i<50;i++){
+        for(int i=0;i<100;i++){
            Log.d(tag,array[i]+"");
         }
 
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
                 if (c == 0){
                     chrono.start();
                 }
-                if (c == 50 | elapsedMillis > 60000 ) {
+                if (c == 100 | elapsedMillis > 60000 ) {
                     chrono.stop();
                     textView.setText("Ход следующего игрока, ваш счёт: " +c+", ваше время: "+(int)(elapsedMillis/1000) + " секунд(ы)");
                     c = 0;
